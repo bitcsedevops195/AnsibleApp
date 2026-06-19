@@ -12,7 +12,7 @@ pipeline {
      
            steps {
            
-              git branch: 'master' , url: 'https://github.com/bitcsedevops195/AnsibleApp.git'
+              git branch: 'main' , url: 'https://github.com/bitcsedevops195/AnsibleApp.git'
               
            }
       }
