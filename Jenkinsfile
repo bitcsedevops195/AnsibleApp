@@ -32,7 +32,7 @@ pipeline {
      
            steps {
            
-              archiveArtifacts artifacts: 'Rei/AnsibleApp/target/*.war', fingerprint:true
+              archiveArtifacts artifacts: '/target/*.war'
               
            }
       }
