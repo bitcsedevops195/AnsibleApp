@@ -1,0 +1,10 @@
+- name: Deploy To Tomcat
+  hosts: web
+  become: yes
+  
+  tasks:
+    - name: Copy War file To Tomcat
+      copy:
+         src: "{{ lookup('env','WORKSPACE') }}/target/AnsibleApp.war"
+         dest: "/opt/tomcat/webapps/AnsibleApp.war"
+         
