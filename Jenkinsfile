@@ -22,7 +22,7 @@ pipeline {
      
            steps {
            
-              sh 'mvn clean compile'
+              sh 'mvn clean install'
               
            }
       }
@@ -32,7 +32,7 @@ pipeline {
      
            steps {
            
-              archiveArtifacts artifacts: 'target/*.war'
+              archiveArtifacts artifacts: 'target/*.war', fingerprint:true
               
            }
       }
@@ -41,7 +41,7 @@ pipeline {
      
            steps {
            
-              sh 'mvn clean compile'
+              sh 'mvn clean install'
               sh 'ansible-playbook ansible/playbook.yml -i ansible/hosts.ini'
               
            }
